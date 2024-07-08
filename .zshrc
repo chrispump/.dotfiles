@@ -7,9 +7,9 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # aliases
-alias config="/usr/bin/git --git-dir=${HOME}/.dotfiles/.git/ --work-tree=${HOME}"
+alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/.git/ --work-tree=${HOME}"
 alias zsh-reload='source ~/.zshrc'
-alias zsh-edit='vi ~/.zshrc'
+alias zsh-edit='vim ~/.zshrc'
 
 # path
 export PATH=$home/bin:/usr/local/bin:$PATH
