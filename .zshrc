@@ -21,7 +21,7 @@ zstyle ':omz:update' frequency 1
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom"
 
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 plugins=(
   git
