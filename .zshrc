@@ -37,7 +37,6 @@ source $ZSH/oh-my-zsh.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 # nvm (Homebrew)
 export NVM_DIR="${HOME}/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -45,3 +44,6 @@ export NVM_DIR="${HOME}/.nvm"
 
 # ghcup (Haskell)
 [ -f "/Users/chris/.ghcup/env" ] && . "/Users/chris/.ghcup/env" # ghcup-env
+
+# thefuck
+eval $(thefuck --alias)
