@@ -47,3 +47,6 @@ export NVM_DIR="${HOME}/.nvm"
 
 # thefuck
 eval $(thefuck --alias)
+
+# Created by `pipx` on 2024-09-05 16:02:16
+export PATH="$PATH:/Users/chris/.local/bin"
