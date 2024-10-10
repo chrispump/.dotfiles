@@ -12,14 +12,17 @@ alias zsh-reload='source ~/.zshrc'
 alias zsh-edit='vim ~/.zshrc'
 
 # path
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+typeset -U path
+path=($HOME/bin $HOME/.local/bin /usr/local/bin $path)
 
 # oh-my-zsh
 export ZSH="${HOME}/.oh-my-zsh"
 zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 1
 ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom"
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 
 # ENABLE_CORRECTION="true"
 
