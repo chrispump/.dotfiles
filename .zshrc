@@ -12,7 +12,7 @@ alias zsh-reload='source ~/.zshrc'
 alias zsh-edit='vim ~/.zshrc'
 
 # path
-export PATH=$home/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # oh-my-zsh
 export ZSH="${HOME}/.oh-my-zsh"
@@ -35,18 +35,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
 # nvm (Homebrew)
-export NVM_DIR="${HOME}/.nvm"
+export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # ghcup (Haskell)
-[ -f "/Users/chris/.ghcup/env" ] && . "/Users/chris/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
 
 # thefuck
 eval $(thefuck --alias)
-
-# Created by `pipx` on 2024-09-05 16:02:16
-export PATH="$PATH:/Users/chris/.local/bin"
