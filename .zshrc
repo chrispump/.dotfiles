@@ -1,10 +1,11 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/chris/.zsh/completions:"* ]]; then export FPATH="/Users/chris/.zsh/completions:$FPATH"; fi
-
 # Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/chris/.zsh/completions:"* ]]; then export FPATH="/Users/chris/.zsh/completions:$FPATH"; fi
+
 
 # customize prompt: `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -50,3 +51,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # thefuck
 eval $(thefuck --alias)
+. "/Users/chris/.deno/env"
