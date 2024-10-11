@@ -1,3 +1,6 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/chris/.zsh/completions:"* ]]; then export FPATH="/Users/chris/.zsh/completions:$FPATH"; fi
+
 # Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -10,9 +13,6 @@ fi
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/.git/ --work-tree=${HOME}"
 alias zsh-reload='source ~/.zshrc'
 alias zsh-edit='vim ~/.zshrc'
-
-# path
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 typeset -U path
 path=($HOME/bin $HOME/.local/bin /usr/local/bin $path)
@@ -39,7 +39,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
-
+test -e "$HOME/.deno/env" && . "$HOME/.deno/env"
 # nvm (Homebrew)
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
