@@ -51,4 +51,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # thefuck
 eval $(thefuck --alias)
-. "/Users/chris/.deno/env"
