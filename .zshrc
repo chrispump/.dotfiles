@@ -14,6 +14,7 @@ if [[ ":$FPATH:" != *":/Users/chris/.zsh/completions:"* ]]; then export FPATH="/
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/.git/ --work-tree=${HOME}"
 alias zsh-reload='source ~/.zshrc'
 alias zsh-edit='vim ~/.zshrc'
+alias openports='lsof -P -iTCP -sTCP:LISTEN +c0'
 
 typeset -U path
 path=($HOME/bin $HOME/.local/bin /usr/local/bin $path)
