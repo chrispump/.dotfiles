@@ -1,14 +1,5 @@
-# Powerlevel10k instant prompt
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/Users/chris/.zsh/completions:"* ]]; then export FPATH="/Users/chris/.zsh/completions:$FPATH"; fi
-
-
-# customize prompt: `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # aliases
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/.git/ --work-tree=${HOME}"
@@ -23,7 +14,6 @@ path=($HOME/bin $HOME/.local/bin /usr/local/bin $path)
 export ZSH="${HOME}/.oh-my-zsh"
 zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 1
-#ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="awesomepanda"
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 
@@ -50,6 +40,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # ghcup (Haskell)
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
-
-# thefuck
-eval $(thefuck --alias)
