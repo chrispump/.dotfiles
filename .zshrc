@@ -14,7 +14,7 @@ path=($HOME/bin $HOME/.local/bin /usr/local/bin $path)
 export ZSH="${HOME}/.oh-my-zsh"
 zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 1
-ZSH_THEME="awesomepanda"
+ZSH_THEME="gnzh"
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 
 # ENABLE_CORRECTION="true"
@@ -40,3 +40,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # ghcup (Haskell)
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/chris/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/chris/Library/Application Support/Herd/bin/":$PATH
